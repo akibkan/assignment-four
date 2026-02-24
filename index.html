@@ -10,6 +10,255 @@
 </head>
 <body>
     
+        <header class="w-9/12 mx-auto">
+        <h1 class="font-bold text-2xl mb-4 mt-15">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-5 mb-7">
+            <div class="bg-[#ffffff] shadow p-5">
+                <div class="body-card">
+                    <p class="text-sm text-gray-800">Total</p>
+                    <h2  class="font-bold">8</h2>
+                </div>
+            </div>
+            <div class="bg-[#ffffff] shadow p-5">
+                <div class="body-card">
+                    <p class="text-sm text-gray-800">Interview</p>
+                    <h2 id="interview-count" class="font-bold text-green-600">0</h2>
+                </div>
+            </div>
+            <div class="bg-[#ffffff] shadow p-5">
+                <div class="body-card">
+                    <p class="text-sm text-gray-800">Rejected</p>
+                    <h2 id="rejected-count" class="font-bold text-red-600">0</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <!-- heading and Button section  -->
+    <section class="w-9/12 mx-auto">
+        <div class="flex justify-between">
+            <h2 class="font-bold text-2xl">Available Jobs</h2>
+            <p id="job-count" class="text-gray-500">8 jobs</p>
+        </div>
+
+        <div id="btn-group" class="join mt-6 gap-4 ">
+            <button onclick = "toggleStyle('all-btn'); showOnly('all-cards') " id="all-btn" class=" btn join-item btn-primary px-8 py-6">All</button>
+            <button onclick = "toggleStyle('interview-btn');showOnly('interview-cards')"  id="interview-btn" class="btn join-item px-8 py-6 ">Interview</button>
+            <button onclick = "toggleStyle('rejected-btn');showOnly('rejected-cards')"  id="rejected-btn" class="btn join-item px-8 py-6">Rejected</button>
+        </div>
+    </section>
+
+        <!-- card section  -->
+    <main id="all-cards">
+
+    <!-- card 1 -->
+    <section id="card-1" class="w-9/12 mx-auto">
+        <div class="card bg-[#ffffff] shadow mb-5 mt-7" data-id ="1">
+            <div class="card-body">
+                <div class="flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold">CloudNest Technologies</h2>
+                        <p class="text-gray-500 text-sm">Frontend Engineer</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+                    <p class="text-sm text-gray-500 mt-2">Remote. Full-time. $90,000-$120,000</p>
+                    <span class=" applied font-semibold w-fit btn">NOT APPLIED</span>
+                    <p class="text-sm text-gray-500 mt-3">Build responsive web interfaces using React and Tailwind CSS. Collaborate with designers and backend engineers.</p>
+                    <div class="flex gap-4 mt-5">
+                        <button class="inter-btn btn btn-outline btn-success btn-sm">INTERVIEW</button>
+                        <button class=" rej-btn btn btn-sm btn-outline btn-error">REJECTED</button>
+                    </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- card 2  -->
+    <section id="card-2" class="w-9/12 mx-auto">
+        <div class="card bg-#ffffff shadow mb-5 mt-7" data-id ="2">
+            <div class="card-body">
+                <div class="flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold">FreshMart Grocers</h2>
+                        <p class="text-gray-500 text-sm">Supply Chain Coordinator</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+                    <p class="text-sm text-gray-500 mt-2">Hybrid. Full-time. $45,000–$60,000</p>
+                    <span class="applied font-semibold w-fit btn">NOT APPLIED</span>
+                    <p class="text-sm text-gray-500 mt-3">Manage inventory, coordinate with vendors, and ensure timely delivery of grocery products.</p>
+                    <div class="flex gap-4 mt-5">
+                        <button class=" inter-btn btn btn-outline btn-success btn-sm">INTERVIEW</button>
+                        <button class=" rej-btn btn btn-sm btn-outline btn-error">REJECTED</button>
+                    </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- card 3 -->
+    <section id="card-3" class="w-9/12 mx-auto">
+        <div class="card bg-#ffffff shadow mb-5 mt-7" data-id ="3">
+            <div class="card-body">
+                <div class="flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold">PrimeCare Hospital</h2>
+                        <p class="text-gray-500 text-sm">Medical Receptionist</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+                    <p class="text-sm text-gray-500 mt-2">Onsite. Full-time. $30,000–$40,000</p>
+                    <span class="applied font-semibold w-fit btn">NOT APPLIED</span>
+                    <p class="text-sm text-gray-500 mt-3">Handle patient appointments, front-desk operations, and basic medical documentation.</p>
+                    <div class="flex gap-4 mt-5">
+                        <button class=" inter-btn btn btn-outline btn-success btn-sm">INTERVIEW</button>
+                        <button class=" rej-btn btn btn-sm btn-outline btn-error">REJECTED</button>
+                    </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- card 4 -->
+    <section id="card-4" class="w-9/12 mx-auto">
+        <div class="card bg-#ffffff shadow mb-5 mt-7" data-id ="4">
+            <div class="card-body">
+                <div class="flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold">BrightFuture Academy</h2>
+                        <p class="text-gray-500 text-sm">Academic Counselor</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+                    <p class="text-sm text-gray-500 mt-2">Onsite. Full-time. $40,000–$55,000</p>
+                    <span class="applied font-semibold w-fit btn">NOT APPLIED</span>
+                    <p class="text-sm text-gray-500 mt-3">Guide students on course selection, career planning, and academic progress.</p>
+                    <div class="flex gap-4 mt-5">
+                        <button class=" inter-btn btn btn-outline btn-success btn-sm">INTERVIEW</button>
+                        <button class=" rej-btn btn btn-sm btn-outline btn-error">REJECTED</button>
+                    </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- card 5 -->
+    <section id="card-5" class="w-9/12 mx-auto">
+        <div class="card bg-#ffffff shadow mb-5 mt-7" data-id ="5">
+            <div class="card-body">
+                <div class="flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold">UrbanBuild Constructions</h2>
+                        <p class="text-gray-500 text-sm">Site Supervisor</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+                    <p class="text-sm text-gray-500 mt-2">Onsite. Full-time. $50,000–$70,000</p>
+                    <span class="applied font-semibold w-fit btn">NOT APPLIED</span>
+                    <p class="text-sm text-gray-500 mt-3">Oversee construction site activities, manage workers, and ensure safety compliance.</p>
+                    <div class="flex gap-4 mt-5">
+                        <button class=" inter-btn btn btn-outline btn-success btn-sm">INTERVIEW</button>
+                        <button class=" rej-btn btn btn-sm btn-outline btn-error">REJECTED</button>
+                    </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- card 6 -->
+    <section id="card-6" class="w-9/12 mx-auto">
+        <div class="card bg-#ffffff shadow mb-5 mt-7" data-id ="6">
+            <div class="card-body">
+                <div class="flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold">TasteBite Restaurants</h2>
+                        <p class="text-gray-500 text-sm">Restaurant Manager</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+                    <p class="text-sm text-gray-500 mt-2">Onsite. Full-time. $45,000–$65,000</p>
+                    <span class="applied font-semibold w-fit btn">NOT APPLIED</span>
+                    <p class="text-sm text-gray-500 mt-3">Manage daily restaurant operations, staff scheduling, and customer experience.</p>
+                    <div class="flex gap-4 mt-5">
+                        <button class=" inter-btn btn btn-outline btn-success btn-sm">INTERVIEW</button>
+                        <button class=" rej-btn btn btn-sm btn-outline btn-error">REJECTED</button>
+                    </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- card 7 -->
+    <section id="card-7" class="w-9/12 mx-auto">
+        <div class="card bg-#ffffff shadow mb-5 mt-7" data-id ="7">
+            <div class="card-body">
+                <div class="flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold">MoveFast Logistics</h2>
+                        <p class="text-gray-500 text-sm">Delivery Operations Officer</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+                    <p class="text-sm text-gray-500 mt-2">Hybrid. Full-time. $38,000–$52,000</p>
+                    <span class="applied font-semibold w-fit btn">NOT APPLIED</span>
+                    <p class="text-sm text-gray-500 mt-3">Coordinate delivery teams, track shipments, and resolve logistics issues.</p>
+                    <div class="flex gap-4 mt-5">
+                        <button class=" inter-btn btn btn-outline btn-success btn-sm">INTERVIEW</button>
+                        <button class=" rej-btn btn btn-sm btn-outline btn-error">REJECTED</button>
+                    </div>
+                
+            </div>
+        </div>
+
+    </section>
+
+    <!-- card 8 -->
+    <section id="card-8" class="w-9/12 mx-auto">
+        <div class="card bg-#ffffff shadow mb-5 mt-7" data-id ="8">
+            <div class="card-body">
+                <div class="flex justify-between">
+                    <div>
+                        <h2 class="text-xl font-semibold">Mobile first Corp</h2>
+                        <p class="text-gray-500 text-sm">React Native Developer</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                    </div>
+                </div>
+                    <p class="text-sm text-gray-500 mt-2">Remote. Full-time. $130,000-$175,000</p>
+                    <span class="applied font-semibold w-fit btn">NOT APPLIED</span>
+                    <p class="text-sm text-gray-500 mt-3">Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+                    <div class="flex gap-4 mt-5">
+                        <button class=" inter-btn btn btn-outline btn-success btn-sm">INTERVIEW</button>
+                        <button class=" rej-btn btn btn-sm btn-outline btn-error">REJECTED</button>
+                    </div>
+                
+            </div>
+        </div>
+
+    </section>
+    </main>
 
 
 
