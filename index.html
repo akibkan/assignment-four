@@ -42,9 +42,9 @@
         </div>
 
         <div id="btn-group" class="join mt-6 gap-4 ">
-            <button onclick = "toggleStyle('all-btn'); showOnly('all-cards') " id="all-btn" class=" btn join-item btn-primary px-8 py-6">All</button>
-            <button onclick = "toggleStyle('interview-btn');showOnly('interview-cards')"  id="interview-btn" class="btn join-item px-8 py-6 ">Interview</button>
-            <button onclick = "toggleStyle('rejected-btn');showOnly('rejected-cards')"  id="rejected-btn" class="btn join-item px-8 py-6">Rejected</button>
+            <button onclick = "toggleStyle('all-btn'); showOnly('all-cards') " id="all-btn" class=" btn join-item btn-primary px-8 py-6 rounded">All</button>
+            <button onclick = "toggleStyle('interview-btn');showOnly('interview-cards')"  id="interview-btn" class="btn join-item px-8 py-6 rounded">Interview</button>
+            <button onclick = "toggleStyle('rejected-btn');showOnly('rejected-cards')"  id="rejected-btn" class="btn join-item px-8 py-6 rounded">Rejected</button>
         </div>
     </section>
 
@@ -61,7 +61,7 @@
                         <p class="text-gray-500 text-sm">Frontend Engineer</p>
                     </div>
                     <div>
-                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class=" del-btn btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 </div>
                     <p class="text-sm text-gray-500 mt-2">Remote. Full-time. $90,000-$120,000</p>
@@ -87,7 +87,7 @@
                         <p class="text-gray-500 text-sm">Supply Chain Coordinator</p>
                     </div>
                     <div>
-                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="del-btn btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 </div>
                     <p class="text-sm text-gray-500 mt-2">Hybrid. Full-time. $45,000–$60,000</p>
@@ -113,7 +113,7 @@
                         <p class="text-gray-500 text-sm">Medical Receptionist</p>
                     </div>
                     <div>
-                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="del-btn btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 </div>
                     <p class="text-sm text-gray-500 mt-2">Onsite. Full-time. $30,000–$40,000</p>
@@ -139,7 +139,7 @@
                         <p class="text-gray-500 text-sm">Academic Counselor</p>
                     </div>
                     <div>
-                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="del-btn btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 </div>
                     <p class="text-sm text-gray-500 mt-2">Onsite. Full-time. $40,000–$55,000</p>
@@ -165,7 +165,7 @@
                         <p class="text-gray-500 text-sm">Site Supervisor</p>
                     </div>
                     <div>
-                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="del-btn btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 </div>
                     <p class="text-sm text-gray-500 mt-2">Onsite. Full-time. $50,000–$70,000</p>
@@ -191,7 +191,7 @@
                         <p class="text-gray-500 text-sm">Restaurant Manager</p>
                     </div>
                     <div>
-                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="del-btn btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 </div>
                     <p class="text-sm text-gray-500 mt-2">Onsite. Full-time. $45,000–$65,000</p>
@@ -217,7 +217,7 @@
                         <p class="text-gray-500 text-sm">Delivery Operations Officer</p>
                     </div>
                     <div>
-                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="del-btn btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 </div>
                     <p class="text-sm text-gray-500 mt-2">Hybrid. Full-time. $38,000–$52,000</p>
@@ -243,7 +243,7 @@
                         <p class="text-gray-500 text-sm">React Native Developer</p>
                     </div>
                     <div>
-                        <button class="btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
+                        <button class="del-btn btn btn-sm btn-ghost"><i class="fa-regular fa-trash-can"></i></button>
                     </div>
                 </div>
                     <p class="text-sm text-gray-500 mt-2">Remote. Full-time. $130,000-$175,000</p>
@@ -261,11 +261,15 @@
     </main>
 
 
+    <div id="empty-state" class="w-9/12 mx-auto bg-white shadow text-center py-16 hidden mt-7">
+        <img class="mx-auto w-20 opacity-80" src="./jobs.png" alt="No jobs"/>
+        <h3 class="mt-4 text-lg font-semibold">No jobs available</h3>
+        <p class="text-sm text-gray-500">Check back soon for new job opportunities</p>
+    </div>
 
+    <main id="interview-cards" class="w-9/12 mx-auto hidden"></main>
 
-
-
-
+    <main id="rejected-cards" class="w-9/12 mx-auto hidden"></main>
 
 
 
